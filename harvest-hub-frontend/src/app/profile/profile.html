@@ -1,0 +1,68 @@
+<div class="app-container">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <h1>🌾 HarvestHub</h1>
+        <p>Farm Management System</p>
+      </div>
+      <div class="topbar-actions">
+        <a routerLink="/profile" class="profile-link">
+          <span class="profile-avatar">👤</span>
+          <span class="profile-name">{{ user?.name }}</span>
+          <span class="profile-caret">▾</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-page">
+
+    <div class="profile-header">
+      <a routerLink="/" class="back-link">← Back to Dashboard</a>
+      <h2>User Profile</h2>
+    </div>
+
+    <div class="profile-card" *ngIf="user">
+
+      <div class="profile-card-header">
+        <div class="avatar-large">👤</div>
+        <div class="profile-card-info">
+          <h3>{{ user.name }}</h3>
+          <p class="role-badge">{{ user.role }}</p>
+        </div>
+      </div>
+
+      <div class="profile-details">
+
+        <div class="detail-row">
+          <span class="detail-label">Username</span>
+          <span class="detail-value">{{ user.username }}</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Email</span>
+          <span class="detail-value">{{ user.email }}</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Status</span>
+          <span class="detail-value status-active">{{ user.status }}</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Application</span>
+          <span class="detail-value">{{ user.application }}</span>
+        </div>
+
+      </div>
+
+      <div class="profile-actions">
+        <button class="logout-button" (click)="logout()">Logout</button>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="farms-container">
+
+  <a href="/" class="back-link">← Back to Dashboard</a>
+
+  <h2>Farms</h2>
+
+  <p>Manage your farms and their details.</p>
+
+  <div class="farm-list">
+
+    <div class="farm-card" *ngFor="let farm of farms">
+
+      <h3>{{ farm.name }}</h3>
+
+      <p><strong>Location:</strong> {{ farm.location }}</p>
+
+      <p><strong>Total Area:</strong> {{ farm.totalArea }} acres</p>
+
+      <p><strong>Farm ID:</strong> {{ farm.id }}</p>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="fields-container">
+
+  <a href="/" class="back-link">← Back to Dashboard</a>
+
+  <h2>Fields</h2>
+
+  <p>Manage fields belonging to your farms.</p>
+
+  <div class="field-list">
+
+    <div class="field-card" *ngFor="let field of fields">
+
+      <h3>{{ field.name }}</h3>
+
+      <p><strong>Area:</strong> {{ field.area }} acres</p>
+
+      <p><strong>Soil Type:</strong> {{ field.soilType }}</p>
+
+      <p><strong>Field ID:</strong> {{ field.id }}</p>
+
+    </div>
+
+  </div>
+
+</div>
